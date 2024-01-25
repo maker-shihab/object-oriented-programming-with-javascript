@@ -1,6 +1,6 @@
 # Object-Oriented Programming With JavaScript: A Comprehensive Exploration
 
-    In this report, me and my friends aim to provide a thorough understanding of Object-Oriented Programming (OOP) concepts using JavaScript as the primary language. As we collaborate on this endeavor, let's embark on a journey to delve into the core principles of OOP and explore the practical implementation aspects within the JavaScript context. So, without further ado, let's begin our exploration of what we plan to cover in this comprehensive guide.
+In this report, me and my friends aim to provide a thorough understanding of Object-Oriented Programming (OOP) concepts using JavaScript as the primary language. As we collaborate on this endeavor, let's embark on a journey to delve into the core principles of OOP and explore the practical implementation aspects within the JavaScript context. So, without further ado, let's begin our exploration of what we plan to cover in this comprehensive guide.
 
 ## Table of Contents
 
