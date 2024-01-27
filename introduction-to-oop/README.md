@@ -195,6 +195,32 @@ const employee = new Person("John Doe", 30);
 ```
 
 3. Scalability: </br>
-   Explanation: OOP provides a scalable structure, making it easier to extend and modify the codebase as the application grows. New features can be added without disrupting existing code. </br>
+   Explanation: </br> OOP provides a scalable structure, making it easier to extend and modify the codebase as the application grows. New features can be added without disrupting existing code. </br>
 
-Example: </br> Adding a new type of object, such as introducing a Teacher class alongside the existing Student and Person classes, demonstrates the scalability of the OOP approach.
+Example: </br>
+Adding a new type of object, such as introducing a Teacher class alongside the existing Student and Person classes, demonstrates the scalability of the OOP approach.
+
+```js
+// Existing Person class
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  // Methods related to person's behavior
+}
+
+// New Teacher class extending the Person class
+class Teacher extends Person {
+  constructor(name, age, subject) {
+    super(name, age);
+    this.subject = subject;
+  }
+
+  // Methods related to teacher-specific functionalities
+}
+
+// Creating a new Teacher object
+const mathTeacher = new Teacher("Mrs. Smith", 40, "Mathematics");
+```
