@@ -94,3 +94,46 @@ const square = new Square(4);
 console.log(calculateArea(circle)); // Output: 78.54
 console.log(calculateArea(square)); // Output: 16
 ```
+
+### Objects and Functions in JavaScript
+
+JavaScript treats functions as first-class citizens, allowing them to be used as objects and enabling the creation of object instances using constructor functions.
+
+#### Objects:
+
+```js
+// Object literal
+const person = {
+  name: "John",
+  age: 30,
+  greet: function () {
+    console.log(
+      `Hello, my name is ${this.name} and I'm ${this.age} years old.`
+    );
+  },
+};
+
+person.greet(); // Output: Hello, my name is John and I'm 30 years old.
+```
+
+Functions: </br>
+
+```js
+// Function declaration
+function Dog(name, breed) {
+  this.name = name;
+  this.breed = breed;
+  this.bark = function () {
+    console.log(`Woof! I'm ${this.name}, the ${this.breed}.`);
+  };
+}
+
+// Creating instances using the constructor function
+const dog1 = new Dog("Buddy", "Golden Retriever");
+const dog2 = new Dog("Max", "Labrador");
+
+dog1.bark(); // Output: Woof! I'm Buddy, the Golden Retriever.
+dog2.bark(); // Output: Woof! I'm Max, the Labrador.
+```
+
+JavaScript's object-oriented features provide a flexible and powerful paradigm for building applications, especially in the context of web development. Understanding these principles allows developers to create well-structured, maintainable, and scalable code.
