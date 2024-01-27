@@ -40,9 +40,9 @@ myCar.brake(); // Output: Toyota Camry is braking. Current speed: 5 km/h
 
 ### Encapsulation:
 
-- Explanation: Encapsulation is like putting your code in a protective bubble. It involves bundling data (attributes) and the methods (functions) that operate on that data into a single unit, called an object.
+Explanation: </br> Encapsulation is like putting your code in a protective bubble. It involves bundling data (attributes) and the methods (functions) that operate on that data into a single unit, called an object. </br>
 
-- Example: Think of a Person object with private attributes like name and age. Encapsulation ensures that these attributes are accessed and modified through well-defined methods, maintaining control over data integrity.
+Example: </br> Think of a Person object with private attributes like name and age. Encapsulation ensures that these attributes are accessed and modified through well-defined methods, maintaining control over data integrity.
 
 ```js
 class Person {
@@ -76,9 +76,9 @@ console.log(john.age); // Output: 26
 
 ### Inheritance:
 
-- Explanation: Inheritance is a way for a new class (subclass) to inherit properties and behaviors from an existing class (superclass). It promotes code reuse and establishes a hierarchy among classes.
+Explanation: </br> Inheritance is a way for a new class (subclass) to inherit properties and behaviors from an existing class (superclass). It promotes code reuse and establishes a hierarchy among classes. </br>
 
-- Example: Extending the Person class to create a Student class, inheriting properties like name and age while adding new ones like grade.
+Example: </br> Extending the Person class to create a Student class, inheriting properties like name and age while adding new ones like grade.
 
 ```js
 class Student extends Person {
@@ -103,9 +103,9 @@ console.log(alice.grade); // Output: A
 
 ### Polymorphism:
 
-- Explanation: Polymorphism allows objects of different types to be treated as objects of a common type. It provides flexibility by enabling methods to be called on objects without knowing their specific types.
+Explanation: </br> Polymorphism allows objects of different types to be treated as objects of a common type. It provides flexibility by enabling methods to be called on objects without knowing their specific types. </br>
 
-- Example: A Shape class with a polymorphic calculateArea method that behaves differently for various shapes like Circle and Square.
+Example: </br> A Shape class with a polymorphic calculateArea method that behaves differently for various shapes like Circle and Square.
 
 ```js
 class Shape {
@@ -135,17 +135,92 @@ console.log(square.calculateArea()); // Output: Area calculation specific to a s
 
 ### Advantages of OOP
 
-1. Modularity:
-   Explanation: OOP encourages breaking down a program into smaller, independent modules (objects). Each module encapsulates a specific set of functionalities, making the code more organized and easier to manage.
+1. Modularity: </br>
+   Explanation: </br> OOP encourages breaking down a program into smaller, independent modules (objects). Each module encapsulates a specific set of functionalities, making the code more organized and easier to manage. </br>
+   Example: </br>
+   In a banking system, consider having separate objects for Account, Transaction, and Customer. Each object encapsulates related functionalities, promoting modularity.
 
-#### Example: In a banking system, having separate objects for Account, Transaction, and Customer promotes modularity, making it easier to maintain and enhance each component.
+Example: </br> In a banking system, having separate objects for Account, Transaction, and Customer promotes modularity, making it easier to maintain and enhance each component. </br>
 
-2. Reusability:
-   Explanation: OOP promotes the reuse of classes and objects in different parts of the program or even in different projects. This saves time and effort by leveraging existing, well-tested code.
+```js
+class Account {
+  constructor(accountNumber, balance) {
+    this.accountNumber = accountNumber;
+    this.balance = balance;
+  }
 
-#### Example: Reusing the Person class in different parts of your application or in a completely different project without rewriting the entire code.
+  // Methods related to account operations
+}
 
-3. Scalability:
-   Explanation: OOP provides a scalable structure, making it easier to extend and modify the codebase as the application grows. New features can be added without disrupting existing code.
+class Transaction {
+  constructor(transactionId, amount, date) {
+    this.transactionId = transactionId;
+    this.amount = amount;
+    this.date = date;
+  }
 
-#### Example: Adding a new type of object, such as introducing a Teacher class alongside the existing Student and Person classes, demonstrates the scalability of the OOP approach.
+  // Methods related to transaction processing
+}
+
+class Customer {
+  constructor(name, address) {
+    this.name = name;
+    this.address = address;
+  }
+
+  // Methods related to customer information and interactions
+}
+```
+
+2. Reusability: </br>
+   Explanation: </br> OOP promotes the reuse of classes and objects in different parts of the program or even in different projects. This saves time and effort by leveraging existing, well-tested code. </br>
+
+Example: </br>
+Reusing the Person class in different parts of your application or in a completely different project without rewriting the entire code. </br>
+
+Example: </br> Reusing the Person class in different parts of your application or in a completely different project without rewriting the entire code.
+
+```js
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  // Methods related to person's behavior
+}
+
+// Reusing the Person class in a different part of the application
+const employee = new Person("John Doe", 30);
+```
+
+3. Scalability: </br>
+   Explanation: </br> OOP provides a scalable structure, making it easier to extend and modify the codebase as the application grows. New features can be added without disrupting existing code. </br>
+
+Example: </br>
+Adding a new type of object, such as introducing a Teacher class alongside the existing Student and Person classes, demonstrates the scalability of the OOP approach.
+
+```js
+// Existing Person class
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  // Methods related to person's behavior
+}
+
+// New Teacher class extending the Person class
+class Teacher extends Person {
+  constructor(name, age, subject) {
+    super(name, age);
+    this.subject = subject;
+  }
+
+  // Methods related to teacher-specific functionalities
+}
+
+// Creating a new Teacher object
+const mathTeacher = new Teacher("Mrs. Smith", 40, "Mathematics");
+```
